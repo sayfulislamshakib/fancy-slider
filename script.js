@@ -134,16 +134,13 @@ searchBtn.addEventListener("click", function () {
   getImages(search.value);
   sliders.length = 0;
 });
-//Enter Button to click
-const inputEnter = document.getElementById("search");
-inputEnter.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    searchBtn.click();
-  }
+
+sliderBtn.addEventListener("click", function () {
+  createSlider();
 });
 
 document.getElementById("search").addEventListener("keyup", function (event) {
-  if (event.key === "Enter") {
+  if (event.key == "Enter") {
     document.getElementById("search-btn").click();
   }
 });
